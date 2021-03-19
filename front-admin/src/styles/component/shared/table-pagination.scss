@@ -1,0 +1,153 @@
+// .wrap-menu-sort {
+//     margin-bottom: 20px;
+// }
+
+// table {
+//     width: 100%;
+// }
+
+// th.mat-sort-header-sorted {
+//     color: $black;
+// }
+
+// .wrap-table-db {
+
+//     >.mat-table {
+//         background-color: transparent;
+//         box-shadow: unset;
+//         height: $heighttable;
+//         display: block;
+//         overflow-y: auto;
+//         border-top: 1px solid $white;
+//         border-bottom: 1px solid $white;
+
+//         thead {
+//             >.mat-header-row {
+//                 >.mat-header-cell {
+//                     border-bottom-color: $white;
+//                 }
+
+//                 >.imgside {
+//                     font-size: 15px;
+//                     width: 80px;
+//                   }
+
+//                   >.imgside {
+//                     width: 80px;
+//                   }
+
+//                 >.mat-sort-header {
+//                     color: $white;
+//                     font-size: 15px;
+//                 }
+
+//                 >.hhead{
+//                     width: 970px;
+//                 }
+
+//                 >.hname{
+//                     width: 200px;
+//                 }
+
+//                 >.hstatus{
+//                     width: 100px;
+//                 }
+
+//                 >.htime{
+//                  width: 219px;   
+//                 }
+//             }
+//         }
+
+//         tbody {
+//             >.mat-row {
+//                 >.mat-cell {
+//                     font-size: 15px;
+//                     font-weight: 200;
+//                     color: $white;
+//                     border-bottom-color: $white;
+//                     cursor: default;
+
+//                     span {
+//                         @include pointer();
+//                     }
+//                 }
+//             }
+//         }
+
+//         th{
+//             padding: 0 15px;
+
+//             &:nth-child(6),
+//             &:nth-child(7) {
+//                 padding: 0;
+//             }
+
+//             >.textdelete {
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 font-size: $font-size-16;
+//             }
+//         }
+
+//         td {
+//             padding: 0 15px;
+
+//             &:nth-child(6),
+//             &:nth-child(7) {
+//                 padding: 0;
+//             }
+
+//             >.idelete {
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 font-size: $font-size-16;
+//             }
+//         }    
+//     }
+
+//     >.mat-paginator {
+//         background-color: transparent;
+//         color: $white;
+
+//         .mat-form-field-infix {
+
+//             >.mat-select {
+
+//                 >.mat-select-trigger {
+
+//                     >.mat-select-value {
+
+//                         >.mat-select-value-text {
+
+//                             span {
+//                                 color: $white;
+//                             }
+
+//                         }
+//                     }
+
+//                     >.mat-select-arrow-wrapper {
+//                         >.mat-select-arrow {
+//                             color: $white;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//         .mat-form-field-wrapper {
+//             >.mat-form-field-underline {
+//                 background-color: $white;
+//             }
+//         }
+
+//         .mat-paginator-range-actions {
+//             button {
+//                 color: $white;
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,27 @@
+<div class="text">
+    <label for="fheader">{{header}}</label>
+</div>
+
+<div class="radio">
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let season of seasons; let i = index">
+      <mat-radio-button color="primary" [checked]="i == defaultSelected" [value]="i" (change)="selection = $event.value" (click)="OnClick(season)">
+        {{season}}
+      </mat-radio-button>
+    </mat-list-item>
+  </mat-list>
+</div>
+
+
+
+
+<!-- <div class="radio">
+    <mat-radio-group
+  class="radioside"
+  [(ngModel)]="favoriteSeason">
+  <mat-radio-button *ngFor="let season of seasons; let i = index" 
+  [checked]="i == defaultSelected" [value]="i" (change)="selection = $event.value">
+    {{season}}
+  </mat-radio-button>
+</mat-radio-group>
+</div> -->

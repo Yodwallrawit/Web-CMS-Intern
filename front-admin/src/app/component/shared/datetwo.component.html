@@ -1,0 +1,14 @@
+<div class="date-wrap">
+  <h4>Date:</h4>
+  <div class="wrap-pickdate">
+    <span class="material-icons" (click)="picker.open()">
+      keyboard_arrow_down
+    </span>
+    <div class="eventdate" (click)="picker.open()"></div>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <!-- <input class="wrap-input-date" [matDatepicker]="picker"> -->
+      <input matInput type="text" [matDatepicker]="picker" >
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>

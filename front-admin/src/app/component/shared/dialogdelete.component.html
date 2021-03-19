@@ -1,0 +1,13 @@
+<div class="wrap-dialog-del">
+    <h3 mat-dialog-title>{{data.text}}</h3>
+    <mat-dialog-content>
+    
+    </mat-dialog-content>
+</div>
+
+<div class="wrap-btn-dialog-del">
+    <mat-dialog-actions class="wrap-btn-del" align="end">
+        <button class="btn-del01" [ngStyle]="{'display': data.butt1}" [mat-dialog-close]="false" mat-button mat-dialog-close (click)="clickCancelDelete()">{{data.btntext1}}</button>
+        <button class="btn-del02" [ngStyle]="{'display': data.butt2}" cmat-button [mat-dialog-close]="true" (click)="clickdelete()">{{data.btntext2}}</button>
+    </mat-dialog-actions>
+</div>

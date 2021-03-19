@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            position: relative;
+            background: #000;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+            flex: 0 0 auto;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-collection {
+            display: flex;
+            align-items: center;
+        }
+
+        .list-menu {
+            padding: 3px 10px;
+        }
+
+        .seacrh {
+            width: 100px;
+            height: auto;
+        }
+
+        .menu-mobile {
+            position: absolute;
+            right: 5%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .material-icons {
+            color: #FFF;
+        }
+
+        @media(max-width: 899px) {
+            .menu {
+                position: fixed;
+                top: -100%;
+                opacity: 0;
+                height: 100vh;
+                transition: 0.5s all ease;
+                background: rgb(0, 0, 0, 0.7);
+            }
+
+            .menu .active {
+                top: 0;
+                opacity: 1;
+                transition: 0.5s all ease;
+            }
+
+            .menu-mobile {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="" class="logo"></a>
+        <div class="menu">
+            <div class="menu-collection">
+                <div class="list-menu"></div>
+                <div class="list-menu"></div>
+                <div class="list-menu"></div>
+                <div class="list-menu"></div>
+            </div>
+            <div class="seacrh">
+
+            </div>
+        </div>
+        <div class="menu-mobile">
+            <span class="material-icons">
+                menu
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

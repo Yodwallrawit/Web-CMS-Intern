@@ -1,0 +1,25 @@
+<div class="login-page" (keyup.enter)="onClickSubmit()">
+    <div class="login-left">
+        <div class="img-bg">
+        </div>
+    </div>
+    <div class="login-right">
+        <div class="logo-login">
+            <img class="photo" src="{{getlogoimg && getlogoimg.value}}">
+        </div>
+        <div class="form-login">
+            <h1>Sign in</h1>
+            <div class="input-box">
+                <img class="icon-input" src="..\assets\img\user.png" alt="icon" width="150">
+                <input name="username" [(ngModel)]="username" type="text" class="uname-form" placeholder="username">
+            </div>
+            <div class="input-box">
+                <img class="icon-input" src="..\assets\img\padlock.png" alt="icon">
+                <input name="passeord" [(ngModel)]="password" class="uname-form" type="password" placeholder="password">
+            </div>
+            <div class="btn-login ">
+                <button class="press DownButton" type="button" (click)="onClickSubmit()">Log in</button>
+            </div>
+        </div>
+    </div>
+</div>

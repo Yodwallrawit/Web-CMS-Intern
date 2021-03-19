@@ -1,0 +1,30 @@
+<div class="wrap-video">
+
+    <iframe class="content-video" [src]="getlink + getlinkurl | safe" frameborder="0" allow="accelerometer; 
+    autoplay; 
+    clipboard-write; 
+    encrypted-media;
+     gyroscope; 
+     picture-in-picture" allowfullscreen>
+    </iframe>
+
+</div>
+
+<div class="swiper-container" [swiper]="configvideo" [(index)]="index">
+
+    <div class="swiper-wrapper">
+        <div (click)="myFunc(item.url)" *ngFor="let item of geturl" class="swiper-slide">
+            <div class="wrap-slide">
+                <iframe [src]="getlink + item.url | safe" frameborder="0" allowfullscreen></iframe>
+                <div class="wrap-close-iframe">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="swiper-pagination"></div> -->
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>

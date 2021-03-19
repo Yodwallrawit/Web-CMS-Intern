@@ -1,0 +1,39 @@
+.wrap-container{
+    width: 100vw;
+    height: 594px;
+    margin-bottom: 30px;
+    >.swiper-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 24px;
+    
+        > .swiper-wrapper {
+            display: flex;
+    
+            > .swiper-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
+            }
+        }
+        >.swiper-pagination{
+            // background: white;
+        }
+    }
+       
+}
+
+@media screen and (max-width: $lmedium){
+    .wrap-container{
+        // display:flex;
+        height: auto;
+    }
+}

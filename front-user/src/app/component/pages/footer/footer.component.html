@@ -1,0 +1,13 @@
+<div class="wrap-footer">
+    <div class="footer-size">
+        <div class="footer">
+            <div class="contact">
+                
+                <div class="icon-footer" *ngFor="let item of getlogocontact">
+                    <a href="{{item.url}}" target="_blank"> <img [src]="apiBaseURL+item.icon" alt="" width="40px" height="40px"> </a>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>

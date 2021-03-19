@@ -1,0 +1,228 @@
+// .page-managetag {
+//     background: $younggrey;
+//     height: auto;
+//     min-height: calc(100vh - #{$navbar});
+
+//     >.wrap-manage-tag {
+//         height: auto;
+//         padding: 30px;
+
+//         >.wrap-menu-managetag {
+//             height: 70px;
+//             display: flex;
+//             padding-right: 5px;
+//             align-items: center;
+//             margin-bottom: 20px;
+
+//             h4 {
+//                 padding-right: 15px;
+//                 margin: unset;
+//                 font-size: $font-size-18;
+//             }
+
+//             label {
+//                 display: flex;
+//                 color: $white;
+//                 align-items: center;
+//                 padding-right: 5px;
+//                 color: $orange;
+//                 font-weight: 200;
+
+//                 input {
+//                     width: 165px;
+//                     height: 24px;
+//                     border-radius: 20px;
+//                     margin-right: 40px;
+//                 }
+//             }
+//         }
+
+//         >.wrap-table-managetag {
+//             color: $white;
+
+//             >.mat-table {
+//                 background-color: transparent;
+//                 box-shadow: unset;
+//                 height: $heighttablecategory;
+//                 display: block;
+//                 overflow-y: auto;
+//                 border-top: 1px solid $white;
+//                 border-bottom: 1px solid $white;
+
+//                 .tagname {
+//                     width: 100vw;
+
+//                     span {
+//                         display: -webkit-box;
+//                         -webkit-line-clamp: 2;
+//                         -webkit-box-orient: vertical;
+//                         overflow: hidden;
+//                     }
+//                 }
+
+//                 thead {
+//                     >.mat-header-row {
+//                         >.mat-header-cell {
+//                             border-bottom-color: $white;
+//                         }
+
+//                         >.imgside {
+//                             width: 80px;
+//                         }
+//                     }
+//                 }
+
+//                 tbody {
+//                     >.mat-row {
+//                         >.mat-cell {
+//                             font-size: 15px;
+//                             font-weight: 200;
+//                             color: $white;
+//                             border-bottom-color: $white;
+//                             cursor: default;
+
+//                             span {
+//                                 @include pointer();
+//                             }
+
+//                         }
+//                     }
+//                 }
+
+//                 th {
+//                     >.textdelete {
+//                         display: flex;
+//                         justify-content: center;
+//                         align-items: center;
+//                         font-size: $font-size-16;
+//                     }
+//                 }
+
+//                 td {
+//                     >.idelete {
+//                         display: flex;
+//                         justify-content: center;
+//                         align-items: center;
+//                     }
+
+//                 }
+
+
+//                 >.mat-paginator {
+//                     background-color: transparent;
+//                     color: $white;
+
+//                     >.mat-paginator-outer-container {
+
+//                         >.mat-paginator-container {
+
+//                             >.mat-paginator-range-actions {
+
+//                                 >.mat-focus-indicator {
+//                                     color: white;
+//                                 }
+//                             }
+//                         }
+//                     }
+
+//                     .mat-form-field-infix {
+
+//                         >.mat-select {
+
+//                             >.mat-select-trigger {
+
+//                                 >.mat-select-value {
+
+//                                     >.mat-select-value-text {
+
+//                                         span {
+//                                             color: $white;
+//                                         }
+
+//                                     }
+//                                 }
+
+//                                 >.mat-select-arrow-wrapper {
+//                                     >.mat-select-arrow {
+//                                         color: $white;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+
+//                     .mat-form-field-wrapper {
+//                         >.mat-form-field-underline {
+//                             background-color: $white;
+//                         }
+//                     }
+
+//                     .mat-paginator-range-actions {
+//                         button {
+//                             color: $white;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//     }
+// }
+
+.page-managetag {
+    background: $younggrey;
+    height: auto;
+    min-height: calc(100vh - #{$navbar});
+
+    >.wrap-manage-tag {
+        height: auto;
+        padding: 30px;
+
+        >.wrap-menu-managetag {
+            height: $heightonheadtable;
+            display: flex;
+            padding-right: 5px;
+            align-items: center;
+            // margin-bottom: 20px;
+
+            h4 {
+                padding-right: 15px;
+                margin: unset;
+                font-size: $font-size-18;
+            }
+            
+
+            label {
+                display: flex;
+                color: $white;
+                align-items: center;
+                padding-right: 5px;
+                color: $orange;
+                font-weight: 200;
+                
+                p{
+                    display: none;
+                    &.active{
+                        display: flex;
+                        align-items: center;
+                        color: red;
+                        font-size: 14px;
+                        justify-content: center;
+                        margin: unset;
+                        padding-left: 10px
+                    }
+                }
+                input {
+                    width: 165px;
+                    height: 24px;
+                    border-radius: 20px;
+                    margin-right: 40px;
+                    &.active{
+                        margin: unset;
+                        border-color: red;
+                    }
+                }
+            }
+        }
+    }
+}

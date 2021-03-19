@@ -1,0 +1,29 @@
+.wrap-select {
+    display: flex;
+
+    >.custom-select {
+        display: flex;
+        color: $white;
+
+        padding-right: 10px;
+
+        h3 {
+            color: $orange;
+            padding-right: 5px;
+            margin: unset;
+        }
+
+        select {
+            border-radius: 20px;
+            width: 150px;
+            height: 30px;
+            padding: 0 5px;
+            color: $white;
+            background-color: $black;
+            border: 1px solid $white;
+        }
+    }
+
+
+    
+}

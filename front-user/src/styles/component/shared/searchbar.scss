@@ -1,0 +1,70 @@
+.container-search {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    // margin-right: 100px;
+    // padding-right: 15px;
+
+}
+
+.searchbox {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 53px;
+    transition: 0.4s linear;
+    overflow: hidden;
+
+}
+
+.searchbox-input {
+    display: block;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: $black;
+    padding: 15px;
+    color: $black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s linear;
+
+}
+
+.searchbox-input::placeholder {
+    color: $black;
+}
+
+.searchbox-icon {
+    position: absolute;
+    right: calc(53px / 2);
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+.searchbox-icon path {
+    fill: $white;
+    transition: 0.4s linear;
+}
+
+.searchbox:focus-within {
+    max-width: 300px;
+}
+
+.searchbox:focus-within .searchbox-input {
+    background-color: $white;
+    padding-right: 50px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.searchbox:focus-within .searchbox-icon path {
+    fill: $black;
+}

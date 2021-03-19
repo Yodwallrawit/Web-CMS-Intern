@@ -1,0 +1,237 @@
+.my-side {
+    background: $younggrey;
+    height: auto;
+    min-height: calc(100vh - #{$navbar});
+
+    >.myaccound {
+        height: auto;
+        padding: 30px;
+
+        >.headermyaccound {
+            font-size: $font-size-30;
+            color: white;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        >.inform-side {
+            width: 100%;
+            height: auto;
+            display: flex;
+            gap: 20px;
+
+            >.colum01 {
+                width: 50%;
+                height: auto;
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    font-size: 18px;
+                    box-sizing: border-box;
+                    border: .07pt solid white;
+                    color: #ffffff;
+                    background: transparent;
+                }
+
+                >.nameside-my {
+                    color: $white;
+                    font-size: $font-size-20;
+                    margin-bottom: 20px;
+                }
+
+                >.fristside-my {
+                    color: $white;
+                    font-size: $font-size-20;
+                    margin-bottom: 20px;
+                }
+
+                >.passside-my {
+                    height: 80px;
+                    color: $white;
+                    font-size: $font-size-20;
+                    margin-bottom: 20px;
+
+                    >.input-pass {
+                        display: flex;
+                        position: relative;
+                        height: 50px;
+                        align-items: center;
+
+                        input {
+                            font-size: $font-size-30;
+                        }
+
+                        >.icon-edit {
+                            cursor: pointer;
+                            position: absolute;
+                            right: 0;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+
+                >.mailside-my {
+                    color: $white;
+                    font-size: $font-size-20;
+                    margin-bottom: 20px;
+                }
+
+                >.userside-my {
+                    color: $white;
+                    font-size: $font-size-20;
+                    margin-bottom: 20px;
+                }
+
+                >.lastside-my {
+                    color: $white;
+                    font-size: $font-size-20;
+                    margin-bottom: 20px;
+                }
+
+                >.confirmside-my {
+                    color: $white;
+                    font-size: $font-size-20;
+                    margin-bottom: 20px;
+                }
+
+                >.typeside-my {
+                    color: $white;
+                    font-size: $font-size-20;
+                    margin-bottom: 20px;
+                }
+
+                >.buttonstyle {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    button {
+                        width: 110px;
+                        height: 50px;
+                        border-radius: 5px;
+                        outline: unset;
+                        font-size: $font-size-20;
+                        color: white;
+                        background: black;
+                        outline: unset;
+                        border: unset;
+                        &:hover{
+                            background-color: white;
+                            color: black;
+                        }
+    
+                        &:active{
+                            transform: scale(1.1,1.1);
+                        }
+
+                    }
+                }
+            }
+
+            >.colum02 {
+                width: 50%;
+                height: auto;
+
+                >.container {
+                    max-width: 960px;
+                    margin: 30px auto;
+                    padding: 20px;
+
+                    >.avatar-upload {
+                        position: relative;
+                        max-width: 205px;
+                        margin: 50px auto;
+
+                        >.avatar-edit {
+                            position: absolute;
+                            right: 12px;
+                            z-index: 1;
+                            bottom: 13px;
+
+                            input {
+                                display: none;
+
+                                +label {
+                                    display: inline-block;
+                                    width: 34px;
+                                    height: 34px;
+                                    margin-bottom: 0;
+                                    border-radius: 100%;
+                                    background: #FFFFFF50;
+                                    border: 1px solid transparent;
+                                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+                                    cursor: pointer;
+                                    font-weight: normal;
+                                    transition: all .2s ease-in-out;
+
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    &:hover {
+                                        background-color: white;
+                                    }
+
+                                    &:after {
+                                        // content: "\f040";
+                                        font-family: 'FontAwesome';
+                                        color: #757575;
+                                        position: absolute;
+                                        top: 10px;
+                                        left: 0;
+                                        right: 0;
+                                        text-align: center;
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+
+                        >.avatar-preview {
+                            width: 192px;
+                            height: 192px;
+                            position: relative;
+                            border-radius: 100%;
+                            border: 6px solid white;
+                            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+                            >.abso-pre {
+                                position: absolute;
+                                border-radius: 100%;
+                                width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+
+                                img {
+                                    width: 194px;
+                                    height: 194px;
+                                    object-fit: cover;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        >.buttonsise {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+}

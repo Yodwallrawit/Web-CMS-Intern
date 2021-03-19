@@ -1,0 +1,55 @@
+$small: 479px;
+$medium: 767px;
+$lmedium: 899px;
+$large: 1024px;
+$xlarge: 1200px;
+$xxlarge: 1440px;
+
+$breakpoints: (small: 479px,
+    medium: 767px,
+    lmedium: 899px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+);
+
+$black: #000000;
+$orange: #FFC500;
+$white: #ffffff;
+$gray: #898989;
+$yellow: #FDE64B;
+$younggrey: #2A2B3D;
+$font-head : 20px;
+
+$font-size-12 :12px;
+$font-size-14 :14px;
+$font-size-16 :16px;
+$font-size-18 :18px;
+$font-size-20 :20px;
+$font-size-22 :22px;
+$font-size-24 :24px;
+$font-size-26 :26px;
+$font-size-28 :28px;
+$font-size-30 :30px;
+
+@mixin pointer {
+    cursor: pointer;
+    -webkit-user-select: none;
+    /* Safari 3.1+ */
+    -moz-user-select: none;
+    /* Firefox 2+ */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Standard syntax */
+}
+
+$heightonheadtable: 100px;
+
+$navbar: 70px;
+$heightpagegenest: 56px;
+
+$heighttable: calc(100vh - #{$navbar} - #{$heightpagegenest} - 110px - 40px);
+$heighttablecategory: calc(100vh - #{$navbar} - #{$heightpagegenest} - 110px - 40px);
+$heighttableconfig:calc(100vh - #{$heightonheadtable} - #{$heightpagegenest} - 110px - 305px);
+$heighttableAll: calc(100vh - #{$heightonheadtable} - #{$heightpagegenest} - 110px - 40px);

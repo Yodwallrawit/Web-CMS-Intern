@@ -1,0 +1,72 @@
+<div class="page-side">
+    <div class="config">
+        <div class="headerlogo">
+            <label for="Loge">Logo</label>
+        </div>
+
+        <div class="preside">
+            <div class="fupload">
+                <div *ngIf="url == null; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock><img [src]=""></ng-template>
+                <ng-template #elseBlock><img [src]="url"></ng-template>
+                <br />
+            </div>
+        </div>
+
+        <div class="button-wrap">
+            <label class="inputstyle" for="file">
+                <span class="material-icons">
+                    unarchive
+                </span>
+                Upload
+            </label>
+            <input type="file" id="file" class="inputfile" accept=".jpg, .jpeg, .png" (change)="onSelectFile($event)">
+
+            <div class="cccc">
+                <button class="bbnntt" (click)="onClick01()">
+                    Add
+                </button>
+            </div>
+        </div>
+        <div class="bdline"></div>
+        <div class="headercontact">
+            <label for="contact">Contact</label>
+        </div>
+        <div class="contactside">
+            <div class="conside">
+                <div class="pload">
+                    <div *ngIf="nameurl == null; then thenBlock1 else elseBlock1"></div>
+                    <ng-template #thenBlock1><img [src]=""></ng-template>
+                    <ng-template #elseBlock1><img [src]="nameurl"></ng-template>
+                </div>
+            </div>
+            <label for="Loge">Image:</label>
+            <label class="custom" for="text-input">Insert Image</label>
+            <input class="input" id="text-input" type='file' accept=".jpg, .jpeg, .png" (change)="onSide($event)">
+            <div class="discription">
+                <app-inputtext [(value)]="urlnumber" (checkValue)="urlnumber = $event;addText(urlnumber)"
+                    class="textinput" [header]="'Url/Number:'">
+                </app-inputtext>
+            </div>
+            <div class="discription">
+                <app-inputtext [(value)]="nametype" (checkValue)="nametype = $event;addText(nametype)" class="textinput"
+                    [header]="'Name:'">
+                </app-inputtext>
+            </div>
+            <div class="discription">
+                <app-inputtext [(value)]="discription" (checkValue)="discription = $event;addText(discription)"
+                    class="textinput" [header]="'Discription:'">
+                </app-inputtext>
+            </div>
+            <div class="buttonsise">
+                <app-buttoncreate [topicbtn]="'Add'" (click)="onClick()">
+
+                </app-buttoncreate>
+            </div>
+        </div>
+
+        <div class="tableside">
+            <app-tableconfig [ConfigTable]="contactService"></app-tableconfig>
+        </div>
+    </div>
+</div>

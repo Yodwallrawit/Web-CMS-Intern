@@ -1,0 +1,9 @@
+<div class="wrap-select">
+    <div class="custom-select">
+      <h4>{{topicselect}}</h4>
+      <select (change)="getselect($event)">
+        <option value="">select-drop</option>
+        <option [selected]= "selectedMenuchild === item.name" [selected]="selectedValue === item.name" value="{{item.id}}" *ngFor="let item of tanname;">{{item.name}}</option>
+      </select>
+    </div>
+  </div>

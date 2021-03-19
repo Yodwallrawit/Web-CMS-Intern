@@ -1,0 +1,116 @@
+.wrap-dialog-del {
+
+    >.wrap-text-input {
+
+        justify-content: unset;
+        font-size: $font-size-18;
+
+        >.editall {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+
+            >.editfirst {
+                padding: 0 20px 0 0;
+                width: 300px;
+                height: auto;
+
+                >.text01 {
+                    padding-bottom: 10px;
+                }
+            }
+
+            >.editlast {
+                width: 100px;
+
+                >.spanlast {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            >.editname {
+                padding: 0 20px 0 0;
+                width: 300px;
+            }
+
+            .editparent {
+                padding: 0 20px 0 0;
+
+                >.parent {
+                    font-size: $font-size-18;
+                    width: 300px;
+                    height: 46px;
+                    color: $black;
+                    border: 2px solid $black;
+                    border-radius: 5px;
+                }
+            }
+
+            input {
+                color: $black;
+                border: 2px solid $black;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.wrap-btnn-dialog-del {
+
+    >.bbtnn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btnn-del1 {
+            width: 80px;
+            height: 40px;
+            font-size: $font-size-18;
+            margin-right: 20px;
+            background-color: $black;
+            color: $white;
+            border-radius: 5px;
+            box-shadow: 0 9px #999;
+            cursor: pointer;
+            outline: unset;
+
+            &:hover {
+                background-color: rgb(255, 0, 0);
+                border: unset
+            }
+
+            &:active{
+                background-color: rgb(228, 32, 32);
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+                border: unset
+            }
+        }
+
+        .btnn-del2 {
+            width: 80px;
+            height: 40px;
+            font-size: $font-size-18;
+            background-color: $black;
+            color: $white;
+            border-radius: 5px;
+            box-shadow: 0 9px #999;
+            cursor: pointer;
+            outline: unset;
+
+            &:hover {
+                background-color: rgb(51, 255, 0);
+                border: unset;
+            }
+
+            &:active{
+                background-color: rgb(68, 209, 32);
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+                border: unset
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+<table mat-table [dataSource]="dataSource" class="mat-table-config">
+  
+  <!-- Image Column -->
+  <ng-container matColumnDef="image">
+    <th mat-header-cell *matHeaderCellDef class="image">
+      <div>
+        Image
+      </div>
+    </th>
+    <td mat-cell *matCellDef="let element;let i = index" class="image">
+      <div>
+        <img [(src)]="apiBaseURL+element.image">
+      </div>
+    </td>
+  </ng-container>
+
+  <!-- Urlnumber Column -->
+  <ng-container matColumnDef="urlnumber">
+    <th mat-header-cell *matHeaderCellDef class="urlside"> Urlnumber </th>
+    <td mat-cell *matCellDef="let element"> {{element.urlnumber}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef class="name"> Name </th>
+    <td mat-cell *matCellDef="let element" class="name"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Description Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef class="desside"> Description </th>
+    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+  </ng-container>
+
+  <!-- Edit Column -->
+  <ng-container matColumnDef="edit">
+    <th mat-header-cell *matHeaderCellDef class="edit">
+      <div>
+        Edit
+      </div>
+    </th>
+    <td mat-cell *matCellDef="let element;let i = index" class="edit">
+      <div class="idelete">
+        <span class="material-icons" (click)="openDialogEditConfig(element,i,element.id)"> 
+          edit
+        </span>
+      </div>
+      {{element.edit}}
+    </td>
+  </ng-container>
+
+  <!-- delete Column -->
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef class="delete">
+      <div>
+        Delete
+      </div>
+    </th>
+    <td mat-cell *matCellDef="let element; let i = index;" class="delete">
+      <div>
+        <span class="material-icons" (click)="openDialogDeleteConfig(element,i,element.id)">
+          delete_outline
+        </span>
+      </div>
+      {{element.delete}}
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

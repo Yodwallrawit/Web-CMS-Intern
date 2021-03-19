@@ -1,0 +1,53 @@
+<div class="dialogEditContact">
+  <h3 mat-dialog-title>Edit Contact</h3>
+  <div class="input-edit-contact">
+    <div class="input-edit-image">
+      <div class="head-name-edit">
+        <span>
+          Image
+        </span>
+      </div>
+      <div class="wrap-edit-img">
+        <div class="pload">
+          <div *ngIf="editimg == null; then thenBlock1 else elseBlock1"></div>
+          <ng-template #thenBlock1><img [src]=""></ng-template>
+          <ng-template #elseBlock1><img [(src)]="editimg"></ng-template>
+        </div>
+
+        <label class="custom" for="text-input2">Insert Image</label>
+        <input style="outline: 0; display: none;" class="input" id="text-input2" type='file' (change)="onSide($event)">
+      </div>
+    </div>
+    <div class="input-edit-name">
+      <div class="head-name-edit">
+        <span>
+          Name
+        </span>
+      </div>
+      <input type="text" [(ngModel)]="namecontact">
+    </div>
+    <div class="input-edit-urlandnumber">
+      <div class="head-name-edit">
+        <span>
+          Url/Number
+        </span>
+      </div>
+      <input type="text" [(ngModel)]="Urlnumber">
+    </div>
+    <div class="input-edit-discription">
+      <div class="head-name-edit">
+        <span>
+          Description
+        </span>
+      </div>
+      <input type="text" [(ngModel)]="description">
+    </div>
+  </div>
+
+<div class="wrap-btnn-dialog-del">
+    <mat-dialog-actions class="bbtnn" align="end">
+        <button class="btnn-del1" mat-button mat-dialog-close> Cancle</button>
+        <button class="btnn-del2" (click)="onClick()"> Apply</button>
+    </mat-dialog-actions>
+</div>
+</div>

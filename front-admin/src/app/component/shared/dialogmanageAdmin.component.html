@@ -1,0 +1,116 @@
+<div class="wrap-dialog-manage-admin">
+    <h3 mat-dialog-title>Edit Manage Admin</h3>
+    <div class="input-edit-manage-admin">
+
+        <div class="input-edit-img">
+            <div class="head-name-edit">
+                <span>
+                    Image
+                </span>
+            </div>
+            <div class="wrap-img">
+                <img [src]="imageshow" alt="">
+            </div>
+        </div>
+
+        <div class="input-edit-name">
+            <div class="head-name-edit">
+                <span>
+                    Name:
+                </span>
+                <label>
+                    {{nameshow}}
+                </label>
+            </div>
+        </div>
+
+        <div class="input-edit-username">
+            <div class="head-name-edit">
+                <span>
+                    Userame:
+                </span>
+                <label>
+                    {{usernameshow}}
+                </label>
+            </div>
+        </div>
+
+        <div class="input-edit-firstname">
+            <div class="head-name-edit">
+                <span>
+                    Firstname:
+                </span>
+                <label>
+                    {{firstnameshow}}
+                </label>
+            </div>
+        </div>
+
+        <div class="input-edit-lastname">
+            <div class="head-name-edit">
+                <span>
+                    Lastname:
+                </span>
+                <label>
+                    {{lastnameshow}}
+                </label>
+            </div>
+        </div>
+
+        <div class="input-edit-email">
+            <div class="head-name-edit">
+                <span>
+                    Email:
+                </span>
+                <label>
+                    {{emailshow}}
+                </label>
+            </div>
+        </div>
+
+        <div class="input-edit-password">
+            <div class="head-name-edit">
+                <span>
+                    Edit Password:
+                </span>
+            </div>
+            <div class="input-edit">
+                <input type="text" *ngIf="editMode" [(ngModel)]="editpass">
+                <label *ngIf="!editMode">{{editpass}}</label>
+                <span [class.active] = "IsEditactivePass" (click)="editMode = true && IsEditactivePass = true && IsEditactiveSave = true" class="material-icons">
+                    create
+                </span>
+                <div class="wrap-btn-edit">
+                    <button [class.active] = "IsEditactiveSave" (click)="onClicksave()" > Save </button>
+                    <!-- <button (click)="Canceledit()"> Cancel </button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="input-edit-positon">
+            <div class="head-name-edit">
+                <span>
+                    Position:
+                </span>
+            </div>
+            <div class="wrap-select">
+                <label *ngIf="!editMode2">{{selectnewPosition}}</label>
+                <select  *ngIf="editMode2"  [(ngModel)]="selectnewPosition" class="la1" id="status" name="status">
+                    <option class="op1" value="author">Author</option>
+                    <option class="op1" value="admin">Admin</option>
+                    <option class="op1" value="superadmin">Superadmin</option>
+                </select>
+                <span [class.active]="IsEditactivePass555" (click)="editMode2 = true && IsEditactivePass555 = true && IsEditactiveSave555 = true" class="material-icons">
+                    create
+                </span>
+                <button [class.active] = "IsEditactiveSave555" (click)="onClicksaveType()"> Save </button>
+            </div>
+        </div>
+    </div>
+    <div class="wrap-btnn-dialog-del">
+        <mat-dialog-actions class="bbtnn" align="end">
+            <button class="btnn-del1" mat-button mat-dialog-close> Cancle</button>
+            <button class="btnn-del2" (click)="onClick()"> Apply</button>
+        </mat-dialog-actions>
+    </div>
+</div>

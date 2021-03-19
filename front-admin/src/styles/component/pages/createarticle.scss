@@ -1,0 +1,328 @@
+.page-side {
+    background: $younggrey;
+    height: auto;
+    min-height: calc(100vh - #{$navbar});
+
+    >.create-article {
+        height: auto;
+        padding: 30px;
+
+        >.sidehead {
+            margin-bottom: 20px;
+
+            label {
+                color: white;
+                font-size: 20px;
+            }
+
+            p {
+                display: none;
+
+                &.active {
+                    display: block;
+                    color: red;
+                }
+            }
+
+            input {
+                &.active {
+                    border-color: red;
+
+                }
+
+                &:focus {
+                    outline: unset;
+                }
+            }
+        }
+
+        >.sidedrop {
+            width: 100%;
+            height: auto;
+            display: flex;
+            gap: 20px;
+
+            >.left {
+                width: 50%;
+
+                >.dropcategory {
+                    width: 100%;
+                    height: 90px;
+                    color: white;
+                    font-size: 20px;
+
+                    >.wrap-label {
+                        display: flex;
+
+                        p {
+                            display: none;
+
+                            &.active {
+                                display: block;
+                                color: red;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+
+
+
+                    >.la1 {
+                        width: 100%;
+                        height: 50px;
+                        font-size: 18px;
+                        background: transparent;
+                        color: rgb(255, 255, 255);
+                        margin-top: 10px;
+                        border: .07pt solid white;
+
+                        &.active {
+                            border-color: red;
+                        }
+
+                        option {
+                            background-color: #545668;
+                        }
+
+                        >.op1 {
+                            background: #545668;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            >.right {
+                width: 50%;
+
+                >.dropcategory {
+                    width: 100%;
+                    height: 90px;
+                    color: white;
+                    font-size: 20px;
+
+                    >.la1 {
+                        width: 100%;
+                        height: 50px;
+                        font-size: 18px;
+                        background: transparent;
+                        color: rgb(255, 255, 255);
+                        margin-top: 10px;
+                        border: .07pt solid white;
+
+                        option {
+                            background-color: #545668;
+                            color: white;
+                        }
+
+                        >.op1 {
+                            background: #545668;
+                        }
+                    }
+                }
+            }
+
+            margin-bottom: 15px;
+        }
+
+        .body-text {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 10px;
+            display: flex;
+
+            p {
+                display: none;
+
+                &.active {
+                    display: block;
+                    color: red;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        >.editorside {
+            margin-bottom: 20px;
+        }
+
+        >.bord-side {
+            width: 100%;
+            height: auto;
+            display: flex;
+            gap: 20px;
+
+            >.bord-left {
+                width: 50%;
+                height: 100%;
+
+                >.paragraphsiad {
+                    margin-bottom: 15px;
+
+                    label {
+                        color: white;
+                        font-size: 20px;
+                    }
+
+                    p {
+                        display: none;
+
+                        &.active {
+                            display: block;
+                            color: red;
+                        }
+                    }
+
+                    input {
+                        &.active {
+                            border-color: red;
+                        }
+
+                        &:focus {
+                            outline: unset;
+                        }
+                    }
+                }
+
+                >.tagside {
+                    margin-bottom: 15px;
+                    width: 100%;
+
+                    >.tag-wrap {
+                        border: 1px solid $white;
+                        padding: 0 10px;
+                        margin-top: 5px;
+
+                        >.ng2-tag-input {
+                            border: unset;
+                        }
+                    }
+
+                    label {
+                        color: white;
+                        font-size: 20px;
+                    }
+
+                    >.example-chip-list {
+                        width: 100%;
+                    }
+
+                    >.dropcategory {
+                        width: 100%;
+                        height: 90px;
+                        color: white;
+                        font-size: 20px;
+
+                        >.la1 {
+                            width: 100%;
+                            height: 50px;
+                            font-size: 18px;
+                            background: transparent;
+                            color: rgb(255, 255, 255);
+                            margin-top: 10px;
+                            border: .07pt solid white;
+
+                            >.op1 {
+                                background: #545668;
+                            }
+                        }
+                    }
+
+                }
+
+                >.urlside {
+                    margin-bottom: 15px;
+
+                    label {
+                        color: white;
+                        font-size: 20px;
+                    }
+
+                    p {
+                        display: none;
+
+                        &.active {
+                            display: block;
+                            color: red;
+                        }
+                    }
+
+                    input {
+                        &.active {
+                            border-color: red;
+                        }
+
+                        &:focus {
+                            outline: unset;
+                        }
+                    }
+
+                    >.textlink{
+                        display: block;
+                        padding-top: 10px;
+                        color: red;
+                    }
+                }
+
+                >.ttxt {
+                    font-size: 20px;
+                    color: white;
+                    margin-bottom: 15px;
+
+                }
+
+                >.datetimeside {
+                    font-size: 20px;
+                    color: white;
+
+                    p {
+                        display: none;
+
+                        &.active {
+                            display: block;
+                            color: red;
+                            font-size: 14px;
+                        }
+
+                    }
+
+                    input {
+                        &.active {
+                            border-color: red;
+                            color: red;
+                        }
+
+                        &:focus {
+                            outline: unset;
+                        }
+                    }
+
+                }
+
+            }
+
+            >.bord-right {
+                width: 50%;
+                height: 366px;
+                position: relative;
+
+                app-uploadimg {
+                    &.active {
+                        .area-dragdrop {
+                            border: 3px dashed red;
+                        }
+                    }
+                }
+            }
+        }
+
+        >.buttonsise {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+}

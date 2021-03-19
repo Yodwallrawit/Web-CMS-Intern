@@ -1,0 +1,10 @@
+<a [routerLink]="['/content', articleIMGJson.id]"> 
+<div class="wrap-img-content" *ngIf="articleIMGJson && articleIMGJson.cover_image">
+    <img [src]="apiBaseURL+articleIMGJson.cover_image | safe" alt="">
+    <div class="discript-img">
+    
+            <p>{{articleIMGJson.title}}</p>
+        
+    </div>
+</div>
+</a>

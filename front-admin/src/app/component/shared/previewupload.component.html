@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="avatar-upload">
+        <div class="avatar-edit">
+            <input id="imageUpload" accept=".jpg, .jpeg, .png" (click)="openDialog()"/>
+            <label for="imageUpload">
+                <span class="material-icons">
+                    camera_alt
+                </span>
+            </label>
+        </div>
+        <div class="avatar-preview">
+            <div class="abso-pre" >
+                <img  [src]=imgput>
+            </div>
+        </div>
+    </div>
+</div>

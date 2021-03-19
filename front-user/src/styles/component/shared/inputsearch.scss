@@ -1,0 +1,23 @@
+.input-search {
+        display: flex;
+        color: $white;
+        align-items: center;
+        
+      
+
+
+        input {
+            width: 200px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: transparent;
+            border: 0.5px solid $white;
+            color: $white;
+        }
+
+        h3 {
+            margin: unset;
+            padding-right: 5px;
+            color: $orange;
+        }
+    }

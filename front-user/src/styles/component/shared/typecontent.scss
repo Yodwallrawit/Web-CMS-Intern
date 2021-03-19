@@ -1,0 +1,45 @@
+.wrap-type-content{
+    
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+    
+    >.head-type-content{
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+    }
+    // background-color: green;
+    
+    .menu-type-content {
+        display: inline-block;
+        position: relative;
+        color: $gray;
+        justify-content: space-between;
+        @include pointer;
+        
+    }
+
+    .menu-type-content::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $orange;
+        transform-origin: bottom right;
+        transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .menu-type-content:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    @media screen and (max-width: $small){
+        .head-type-content{
+            width: 100%;
+        }
+    }
+}

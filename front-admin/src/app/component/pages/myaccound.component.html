@@ -1,0 +1,84 @@
+<div class="my-side">
+    <div class="myaccound">
+        <div class="headermyaccound">
+            <p>My Account</p>
+        </div>
+        <div class="inform-side">
+            <div class="colum01">
+                <div class="nameside-my">
+                    <span class="text-01">
+                        Name
+                    </span>
+                    <input type="text" [(ngModel)]="NameAc">
+                </div>
+                <div class="userside-my">
+                    <span class="text-01">
+                        Username
+                    </span>
+                    <input type="text" [(ngModel)]="username">
+                </div>
+                <div class="passside-my">
+                    <span class="text-01">
+                        Password
+                    </span>
+                    <div class="input-pass">
+                        <input type="password" value="******************" readonly>
+                        <div class="icon-edit">
+                            <span class="material-icons" (click)="onClickEditPass()">
+                                create
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fristside-my">
+                    <span class="text-01">
+                        First Name
+                    </span>
+                    <input type="text" [(ngModel)]="firstname">
+                </div>
+                <div class="lastside-my">
+                    <span class="text-01">
+                        Last Name
+                    </span>
+                    <input type="text" [(ngModel)]="lastname">
+                </div>
+                <div class="mailside-my">
+                    <span class="text-01">
+                        E-mail
+                    </span>
+                    <input type="text" [(ngModel)]="email">
+                </div>
+                <div class="typeside-my">
+                    <span class="text-01">
+                        Type
+                    </span>
+                    <input type="text" [(ngModel)]="type" readonly>
+                </div>
+                <div class="buttonstyle">
+                    <button (click)="onClickSaveAccount()">
+                        Save
+                    </button>
+                </div>
+            </div>
+            <div class="colum02">
+                <div class="container">
+                    <div class="avatar-upload">
+                        <div class="avatar-edit">
+                            <input id="imageUpload" accept=".jpg, .jpeg, .png" (click)="openDialog()" />
+                            <label for="imageUpload">
+                                <span class="material-icons">
+                                    camera_alt
+                                </span>
+                            </label>
+                        </div>
+                        <div class="avatar-preview">
+                            <div class="abso-pre">
+                                <img [(src)]=image>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

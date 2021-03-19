@@ -1,0 +1,10 @@
+<div class="left-menu" id="style-2">
+  <div class="list-menu" *ngFor="let item of links" [routerLinkActive]="['active']">
+    <a routerLink="/{{item.link}}" >
+      <img src="..\assets\img\{{item.img}}" class="img">
+      <span>
+        {{item.lable}}
+      </span>
+    </a>
+  </div>
+</div>

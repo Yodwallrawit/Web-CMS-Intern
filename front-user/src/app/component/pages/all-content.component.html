@@ -1,0 +1,43 @@
+<div class="wrap-allcontent-page">
+    <div class="allcontent-page">
+
+
+        <div class="wrap-allsort">
+
+            <div class="menu-sort">
+                <div class="wrap-left-sort">
+                    <div class="list-sort">
+                        <app-selectdropdown (takeselectemit)="sentparamiter($event)" [topicselect]="'Category:'"
+                            [tanname]="getrespone" [selectedValue]="message && message.name"
+                            [selectedMenuchild]="datamenu"></app-selectdropdown>
+                    </div>
+                    <div class="list-sort">
+                        <app-selectdropdown (takeselectemit)="sentparamiter($event)" [topicselect]="'Sort:'"
+                            [tanname]="sortap"></app-selectdropdown>
+                    </div>
+                    <div class="list-sort">
+                        <app-selectdropdown (takeselectemit)="sentparamiter($event)" [topicselect]="'Tags:'"
+                            [tanname]="getdatatag"></app-selectdropdown>
+                    </div>
+                    <div class="list-sort">
+                        <app-daterange (takedateemit)="sentparamDate($event)"></app-daterange>
+                    </div>
+                </div>
+
+                <div class="wrap-right-sort">
+                    <app-inputsearch (takeinputemit)="sentparamSearch($event)"></app-inputsearch>
+                </div>
+            </div>
+
+        </div>
+        <div class="wrap-sort-content">
+            <app-card [articleJson]="item"
+                *ngFor="let item of getdataarticle | paginate: { itemsPerPage: 10, currentPage: p }">{{item.length}}
+            </app-card>
+        </div>
+
+        <div class="wrap-pagination">
+            <pagination-controls class="ngx-paginator" (pageChange)="p = $event"></pagination-controls>
+        </div>
+    </div>
+</div>

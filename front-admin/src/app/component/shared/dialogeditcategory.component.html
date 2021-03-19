@@ -1,0 +1,52 @@
+<div class="wrap-dialog-del">
+    <h1 mat-dialog-title>Edit category</h1>
+    <div class="wrap-text-input">
+        <div class="editall">
+            <div class="editfirst">
+                <span class="text01">
+                    Name
+                </span>
+                <input type="text" [(ngModel)]="name">
+            </div>
+            <div class="editparent">
+                <div>
+                    Parent
+                </div>
+
+                <!-- <select [formControl]="panal" class="parent">
+                    <option value="{{item.id}}" *ngFor="let item of parents; let i = index">
+                        {{item.name}}
+                    </option>
+                </select> -->
+
+                <select [(ngModel)]="parent_edit" class="parent">
+                    <option value="">
+                     -- none --
+                    </option>
+                    <option value="{{item.id}}" *ngFor="let item of parents; let i = index">
+                        {{item.name}}
+                    </option>
+                </select>
+
+            </div>
+            <div class="editname">
+                <span>
+                    Discription
+                </span>
+                <input type="text" [(ngModel)]="discription">
+            </div>
+            <div class="editlast">
+                <span class="spanlast">
+                    Pin Order
+                </span>
+                <input type="number" [(ngModel)]="pinorder">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrap-btnn-dialog-del">
+    <mat-dialog-actions class="bbtnn" align="end">
+        <button class="btnn-del1" mat-button mat-dialog-close> Cancle</button>
+        <button class="btnn-del2" (click)="onClick()"> Apply</button>
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,29 @@
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 7px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    // margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: unset;
+    border-radius: 5px;
+  }
+  
+  .button5 {
+    background-color: black;
+    color: white;
+  }
+  
+  .button5:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .button5:active{
+    transform: scale(1.1,1.1);
+  }

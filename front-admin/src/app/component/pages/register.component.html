@@ -1,0 +1,68 @@
+<div class="page-side">
+    <div class="register">
+        <div class="headregister">
+            <p>Register</p>
+        </div>
+        <div class="information-side">
+            <div class="area01">
+                <div class="nameside">
+                    <p [class.active]="IsActiveName">*Required Name</p>
+                    <app-inputtext [class.active]="IsActiveName" [(value)]="name"
+                        (checkValue)="name = $event;addText(name)" [header]="'Name'">
+                    </app-inputtext>
+                </div>
+                <div class="fristside">
+                    <p [class.active]="IsActiveFirstname">*Required Firstname</p>
+                    <app-inputtext [class.active]= "IsActiveFirstname" [(value)]="firstname" (checkValue)="firstname = $event;addText(firstname)"
+                        [header]="'Frist Name'">
+                    </app-inputtext>
+                </div>
+                <div class="passside">
+                    <p [class.active]="IsActivePassword && test">*Required Password</p>
+                    <app-inputtext [class.active]="IsActivePassword" [(value)]="password" (checkValue)="password = $event;addText(password)"
+                        [header]="'Password'">
+                    </app-inputtext>
+                </div>
+                <div class="mailside">
+                    <p [class.active]="IsActiveEmail">*Required Email</p>
+                    <app-inputtext [class.active]="IsActiveEmail" [(value)]="email" (checkValue)="email = $event;addText(email)" [header]="'E-mail'">
+                    </app-inputtext>
+                </div>
+            </div>
+            <div class="area02">
+                <div class="userside">
+                    <p [class.active]="IsActiveUserName">*Required Username</p>
+                    <app-inputtext [class.active]="IsActiveUserName" [(value)]="username" (checkValue)="username = $event;addText(username)"
+                        [header]="'Username'">
+                    </app-inputtext>
+                </div>
+                <div class="lastside">
+                    <p [class.active]="IsActiveLastname">*Required Lastname</p>
+                    <app-inputtext [class.active]="IsActiveLastname" [(value)]="lastname" (checkValue)="lastname = $event;addText(lastname)"
+                        [header]="'Last Name'">
+                    </app-inputtext>
+                </div>
+                <div class="confirmside">
+                    <!-- {{IsActiveConfirmPass}} -->
+                    <p [class.active]="IsActiveConfirmPass && test">*Required Confirm Password</p>
+                    <app-inputtext  [class.active]="IsActiveConfirmPass" [(value)]="confirmpassword"
+                        (checkValue)="confirmpassword = $event;addText(confirmpassword)" [header]="'Confirm Password'">
+                    </app-inputtext>
+                </div>
+                <div class="typeside">
+                    <div class="radioside">
+                        <app-radiobutton [header]="'Type'" (radiotype)=senttype($event)>
+                        </app-radiobutton>
+                    </div>
+                </div>
+            </div>
+            <div class="area03">
+                <app-previewupload (imageApi)=cutimage($event)></app-previewupload>
+            </div>
+        </div>
+        <div class="buttonsise">
+            <app-buttoncreate [topicbtn]="'Apply'" (click)="onClick()">
+            </app-buttoncreate>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.page-side {
+    background: $younggrey;
+    height: auto;
+    min-height: calc(100vh - #{$navbar});
+
+    >.manage-admin {
+        height: auto;
+        padding: 30px;
+        min-height: calc(100vh - 70px - 60px);
+        
+        >.wrap-menu-sort-adminpage {
+            height: $heightonheadtable;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            >.left-menu-sort-adminpage {
+                display: flex;
+            }
+        }
+
+    }
+}

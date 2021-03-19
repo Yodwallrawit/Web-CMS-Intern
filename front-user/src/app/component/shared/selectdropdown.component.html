@@ -1,0 +1,21 @@
+<div class="wrap-select">
+  <div class="custom-select">
+    <h3>{{topicselect}}</h3>
+    <select (change)="getselect($event)">
+      <option value="" >select-drop</option>
+      <option [selected]= "selectedMenuchild === item.name" [selected]="selectedValue === item.name" value="{{item.id}}" *ngFor="let item of tanname;">{{item.name}}</option>
+      <!-- <option  value="{{item.name}}" *ngFor="let item of getdatatag">{{item.name}}</option> -->
+      <!-- <option value="3">Citroen</option>
+      <option value="4">Ford</option>
+      <option value="5">Honda</option>
+      <option value="6">Jaguar</option>
+      <option value="7">Land Rover</option>
+      <option value="8">Mercedes</option>
+      <option value="9">Mini</option>
+      <option value="10">Nissan</option>
+      <option value="11">Toyota</option>
+      <option value="12">Volvo</option> -->
+    </select>
+  </div>
+</div >
+

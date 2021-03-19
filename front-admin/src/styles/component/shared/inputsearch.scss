@@ -1,0 +1,41 @@
+.input-search {
+  display: flex;
+  color: $white;
+  align-items: center;
+  
+  input {
+    width: 170px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 0.5px solid $white;
+    color: $white;
+}
+
+  h4 {
+    margin: unset;
+    padding-right: 15px;
+    color: $orange;
+    font-weight: 300;
+    font-size: $font-size-18;
+  }
+
+  >.wrap-inputsearch {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    >.search-logo {
+      display: flex;
+      position: absolute;
+      color: $white;
+      right: 0;
+      padding-right: 7px;
+      
+      >.material-icons{
+        font-size: 20px;
+        @include pointer
+      }
+    }
+  }
+}

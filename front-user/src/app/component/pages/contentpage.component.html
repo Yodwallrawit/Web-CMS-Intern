@@ -1,0 +1,39 @@
+<div class="wrap-content-page">
+
+    <div class="content-page" *ngFor="let item of getdataarticleID">
+
+        <div class="wrap-headtopic">
+            <p style="line-height: 45px;">{{item&&item.title}}</p>
+        </div>
+
+        <div class="img-content-topic"*ngIf="item&&item.cover_image" >
+            <img [src]="apiBaseURL + item.cover_image" alt=""> 
+        </div>
+
+        <div class="article-one" [innerHTML]="item&&item.content">
+         
+            <!-- {{item&&item.content}} -->
+         
+
+        </div>
+        <div class="wrap-video-contentpage">
+            <iframe class="video-contentpage" [src]="getvideocontent + item.url_video | safe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="wrap-tags-contentpage">
+            <app-headcontent [headname]="'แท็กที่เกี่ยวข้อง'"></app-headcontent>
+
+            <div class="wrap-chips-autocomplete">
+                <app-tags [tagJson]="getdataarticleID[0].tag"></app-tags>
+            </div>
+        </div>
+
+        <div class="card-contentpage-wrap">
+            <app-headcontent class="head-cont-page" [headname]="'ข่าวแนะนำ'"></app-headcontent>
+            <div class="contentpage-card">
+                <app-card [articleJson]="item" *ngFor="let item of getdataarticle  | slice:0:4;"></app-card>
+            </div>
+        </div>
+    </div>
+</div>

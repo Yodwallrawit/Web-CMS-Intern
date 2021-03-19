@@ -1,0 +1,39 @@
+.example-chip-list {
+  width: 100%;
+  color: $white;
+  // background-color: $white;
+}
+
+.mat-form-field {
+
+  >.mat-form-field-wrapper {
+
+    >.mat-form-field-flex {
+
+      >.mat-form-field-infix{
+
+        >.mat-chip-list{
+
+          >.mat-chip-list-wrapper{
+            
+            >.mat-chip{
+              background-color: $yellow;
+            }
+          }
+        }
+      }
+
+    }
+
+    >.mat-form-field-underline {
+      // background-color: $white;
+
+      >.mat-form-field-ripple {
+        background-color: $white;
+
+      }
+
+    }
+
+  }
+}

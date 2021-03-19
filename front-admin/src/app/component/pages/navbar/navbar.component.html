@@ -1,0 +1,64 @@
+<div class="header">
+  <div class="logocpn">
+    <img class="photo" src="{{getlogoimg && getlogoimg.value}}">
+  </div>
+  <div class="profile">
+    <div class="dropdown" (click)="clickprofile()">
+      <img class="img-profile" src="{{datasession.user.image}}">
+      <span class="names">{{datasession.user.nickname}}</span>
+      <svg class="icondrop" [class.active]="nameprofile" xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0"
+        y="0" viewBox="0 0 255 255" style="enable-background:new 0 0 512 512" xml:space="preserve">
+        <g>
+          <g xmlns="http://www.w3.org/2000/svg">
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75   " fill="#ffffff" data-original="#000000" style=""
+                class=""></polygon>
+            </g>
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+          <g xmlns="http://www.w3.org/2000/svg">
+          </g>
+        </g>
+      </svg>
+      <div class="detail-profile" *ngIf="nameprofile">
+        <div class="accside" *ngFor="let item of links" [routerLinkActive]="['active']">
+          <button class="butmayaccount" routerLink='/myaccound'>
+            My Accound
+          </button>
+          <button class="butlogout" routerLink='/login' (click)="onLogout()">
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="black-drop" *ngIf="nameprofile" (click)="clickdrop()"></div>

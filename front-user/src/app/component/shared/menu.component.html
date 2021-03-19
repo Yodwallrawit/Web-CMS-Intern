@@ -1,0 +1,21 @@
+<div class="wrap-menudrop">
+    <div class="menu-parent">
+        <mat-menu #childMenu="matMenu" [overlapTrigger]="false">
+            <ng-container *ngFor="let child of items">
+                <ng-container *ngIf="child.parent_category && child.parent_category.length > 0">
+                    <button (click)="openMenu(child)" [matMenuTriggerFor]="menu.childMenu" mat-menu-item  color="primary"> 
+                        {{child.name}}
+                    </button>
+                    <app-menu #menu [items]="child.parent_category"></app-menu>
+                </ng-container>
+                
+                <ng-container *ngIf="!child.parent_category || child.parent_category.length === 0">
+                    <button (click)="openMenu(child)" mat-menu-item>
+                        {{child.name}}
+                    </button>
+                </ng-container>
+            </ng-container>
+        </mat-menu>
+    </div>
+</div>
+

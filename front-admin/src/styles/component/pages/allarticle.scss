@@ -1,0 +1,25 @@
+.page-side {
+    background: $younggrey;
+    height: auto;
+    min-height: calc(100vh - #{$navbar});
+
+    >.all-article {
+        height: auto;
+        padding: 30px;
+
+        >.wrap-menu-sort {
+            height: $heightonheadtable;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            >.left-menu-sort {
+                display: flex;
+            }
+        }
+
+        >.area-table{
+align-items: center;
+        }
+    }
+}

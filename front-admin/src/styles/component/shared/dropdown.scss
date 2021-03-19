@@ -1,0 +1,27 @@
+.dropdown-side {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    gap: 20px;
+    
+    >.dropcategory {
+        width: 100%;
+        height: 90px;
+        color: white;
+        font-size: 20px;
+
+        >.la1 {
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            background: transparent;
+            color: rgb(255, 255, 255);
+            margin-top: 10px;
+            border: .07pt solid white;
+
+            >.op1 {
+                background: #545668;
+            }
+        }
+    }
+}

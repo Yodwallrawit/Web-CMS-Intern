@@ -1,0 +1,21 @@
+.head-article {
+    display: flex;
+    justify-content: space-between;
+    color: $orange;
+    font-size: $font-head;
+    border: solid 5px;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    border-bottom: groove $orange;
+    padding-bottom: 10px;
+
+    p {
+        margin: unset;
+    }
+
+    >.see-all {
+        color: $white;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,32 @@
+.wrap-select {
+    display: flex;
+
+    >.custom-select {
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+
+        h4 {
+            color: $orange;
+            padding-right: 15px;
+            margin: unset;
+            font-size: $font-size-18;
+            font-weight: 300;
+        }
+
+        select {
+            border-radius: 20px;
+            width: 170px;
+            height: 30px;
+            padding: 0 5px;
+            color: $white;
+            background-color: transparent;
+            border: 1px solid $white;
+
+            option {
+                color: black;
+            }
+
+        }
+    }
+}

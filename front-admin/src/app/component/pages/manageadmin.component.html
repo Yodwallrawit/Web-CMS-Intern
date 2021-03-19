@@ -1,0 +1,12 @@
+<div class="page-side">
+    <div class="manage-admin">
+        <div class="wrap-menu-sort-adminpage">
+            <div class="left-menu-sort-adminpage">
+            </div>
+            <div class="right-menu-sort-adminpage">
+                <app-inputsearch (sentkeyword)=sentdata($event)></app-inputsearch>
+            </div>
+        </div>
+        <table-admin-example [Adminparam]="AdminService"></table-admin-example>
+    </div>
+</div>

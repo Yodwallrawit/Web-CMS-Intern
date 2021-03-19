@@ -1,0 +1,99 @@
+.mat-typography {
+    // >.aaaa {
+    //     width: 100px;
+    // }
+
+    >.mat-dialog-container{
+        height: 652px;
+    }
+
+    >.filestyle {
+        position: relative;
+        margin-top: 15px;
+
+        input[type=file] {
+            position: absolute;
+            width: 100px;
+            z-index: -1;
+            top: 6px;
+            left: 0;
+            font-size: 15px;
+            color: rgb(153, 153, 153);
+        }
+
+        >.aaaa {
+            width: 238px;
+            display: inline-flex;
+            padding: 8px 36px;
+            cursor: pointer;
+            border-radius: 4px;
+            background-color: #000000;
+            font-size: 16px;
+            color: #fff;
+            align-items: center;
+            justify-items: center;
+            
+            span{
+                margin-left: 78px;
+            }
+        }
+
+        >.testaa {
+            // width: 300px !important;
+        }
+
+        img{
+            width: 300px !important;
+        }
+    }
+    
+    .bttcan01{
+        margin-right: 10px;
+        width: 80px;
+        height: 40px;
+        font-size: $font-size-18;
+        margin-right: 20px;
+        background-color: $black;
+        color: $white;
+        border-radius: 5px;
+        box-shadow: 0 9px #999;
+        cursor: pointer;
+        outline: unset;
+
+        &:hover {
+            background-color: rgb(255, 0, 0);
+            border: unset
+        }
+
+        &:active{
+            background-color: rgb(228, 32, 32);
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            border: unset
+        }
+    }
+
+    .bttcan02 {
+        width: 80px;
+        height: 40px;
+        font-size: $font-size-18;
+        background-color: $black;
+        color: $white;
+        border-radius: 5px;
+        box-shadow: 0 9px #999;
+        cursor: pointer;
+        outline: unset;
+
+        &:hover {
+            background-color: rgb(51, 255, 0);
+            border: unset;
+        }
+
+        &:active{
+            background-color: rgb(68, 209, 32);
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            border: unset
+        }
+    }
+}

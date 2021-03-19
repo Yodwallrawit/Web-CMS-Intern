@@ -1,0 +1,35 @@
+
+<div *ngIf="!files.length" class="area-dragdrop" appDrag (files)="filesDropped($event)">
+	<div class="text-wrapper">
+		<div class="centered" (click)="imageInput.click($event)">Drop your file here!</div>
+		<div class="mantle-img">
+			<!-- <img src="{{image}}"> -->
+		</div>
+	</div>
+</div>
+
+<div class="upload" *ngIf="image">
+	<img src="{{image}}">
+</div>
+
+
+<div class="btn-cancel" *ngIf="CancelImg">
+	<button (click)="clear()">cancel</button>
+</div>
+
+<input #imageInput style="display: none" type="file" accept="image/*" (change)="changeListener($event)">
+
+
+
+
+<!-- <div class="mantle-img" *ngFor="let file of files">
+	<img *ngIf="file" [src]="file.url">
+</div> -->
+
+
+
+
+<!--droped image preview-->
+
+
+<!-- <button type="button" (click)="upload()">Upload Image</button> -->

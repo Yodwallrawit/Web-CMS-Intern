@@ -1,0 +1,36 @@
+.wrap-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    border-top: groove 1px;
+
+
+    >.footer-size {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        margin: auto;
+        border-bottom: hidden;
+        border-left: hidden;
+        border-right: hidden;
+        
+
+        >.footer {
+            margin-top: 10px;
+
+            >.contact {
+                display: flex;
+
+                >.icon-footer {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+
+        }
+    }
+
+}

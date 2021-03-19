@@ -1,0 +1,26 @@
+<div class="page-side">
+    <div class="all-article">
+        <div class="wrap-menu-sort">
+            <div class="left-menu-sort">
+                <app-selectdropdown (takeselectemit)="sentparamiter($event)" [topicselect]="'Category:'"
+                    [tanname]="getrespone" [selectedValue]="message && message.name" [selectedMenuchild]="datamenu">
+                </app-selectdropdown>
+                <app-datepicker (takedateemit)=sentDate($event)></app-datepicker>
+                <app-selectdropdown (takeselectemit)="sentparamiter($event)" [topicselect]="'Tags:'"
+                    [tanname]="getdatatag"></app-selectdropdown>
+            </div>
+            <div class="right-menu-sort">
+                <app-inputsearch (sentkeyword)=sentdata($event)></app-inputsearch>
+            </div>
+        </div>
+        <div class="area-table">
+            <ng-container *ngIf="pload; else elseTemplate">
+                <app-pload-component></app-pload-component>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <table-pagination-example  [searchTable]="articlesearchservice">
+                </table-pagination-example>
+            </ng-template>
+        </div>
+    </div>
+</div>

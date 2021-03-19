@@ -1,0 +1,78 @@
+.left-menu {
+    // position: fixed;
+    // top: $navbar;
+    // left: 0;
+    // bottom: 0;
+    width: 300px;
+    height: 100vh;
+    overflow-y: auto;
+    background: #1C1D2C;
+
+    #style-2::-webkit-scrollbar-track {
+
+        border-radius: 10px;
+
+    }
+
+    #style-2::-webkit-scrollbar {
+        width: 10px;
+
+    }
+
+    #style-2::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+
+        background-color: rgba(141, 135, 135, 0.596);
+    }
+
+    #style-2::-webkit-scrollbar-thumb:hover {
+        border-radius: 10px;
+
+        background-color: #797676;
+    }
+
+    >.list-menu {
+        padding: 10px 25px;
+        height: 50px;
+        width: calc(100% - 50px);
+        @include pointer();
+        border-top: 0.7px solid rgb(#1C1D2C, 0.3);
+        border-bottom: 0.7px solid rgb(#1C1D2C, 0.3);
+        display: flex;
+        align-items: center;
+
+        &.active {
+            background-color: rgb(80, 93, 161);
+        }
+
+        a {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            text-decoration: none;
+
+            >.img {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+                flex: 0 0 auto;
+            }
+
+            >span {
+                flex: 1 1 0%;
+                color: white;
+            }
+        }
+
+        &:hover {
+            background: #373B57;
+        }
+
+        &:active {
+            transform: scale(1.05, 1.05);
+        }
+    }
+
+
+}

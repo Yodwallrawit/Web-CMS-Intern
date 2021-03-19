@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="wrap-mainpage">
+    <div class="wrap-menubar">
+        <app-menubar></app-menubar>
+    </div>
+    <div class="wrap-router-outlet">
+        <!-- <ng-container *ngIf="isImg; else elseTemplate">
+            <div>
+                <div class="count5">5</div>
+                <div class="count4">4</div>
+                <div class="count3">3</div>
+                <div class="count2">2</div>
+                <div class="count1">1</div>
+            </div>
+            <img src="../../../assets/img/ddow.gif" alt=""
+                style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9998;">
+        </ng-container>
+        <ng-template #elseTemplate>
+            <router-outlet></router-outlet>
+        </ng-template> -->
+        <router-outlet></router-outlet>
+    </div>
+</div>

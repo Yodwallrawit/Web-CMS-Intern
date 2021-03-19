@@ -1,0 +1,87 @@
+<div class="page-side-keeplog">
+    <div class="manage-log-page">
+        <div class="wrap-menu-logpage">
+            <app-inputsearch></app-inputsearch>
+        </div>
+
+        <div class="wrap-table-log">
+            <table mat-table matSort [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+                <!-- username Column -->
+                <ng-container matColumnDef="username">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="push-name"> Username </th>
+                    <td mat-cell *matCellDef="let element" class="push-name">
+                        <span>
+                            {{element.username}}
+                        </span>
+
+                    </td>
+                </ng-container>
+
+                <!-- action Column -->
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="push-action"> Action </th>
+                    <td mat-cell *matCellDef="let element">
+                        <span>
+                            {{element.action}}
+                        </span>
+                    </td>
+                </ng-container>
+
+                <!-- collection Column -->
+                <ng-container matColumnDef="collection">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="push-name"> Collection </th>
+                    <td mat-cell *matCellDef="let element">
+                        <span>
+                            {{element.collection}}
+                        </span>
+                    </td>
+                </ng-container>
+
+                <!-- document Column -->
+                <ng-container matColumnDef="document">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="push-description"> Document </th>
+                    <td mat-cell *matCellDef="let element">
+                        <span>
+                            {{element.document}}
+                        </span>
+                    </td>
+                </ng-container>
+
+                <!-- description Column -->
+                <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="push-description"> Description </th>
+                    <td mat-cell *matCellDef="let element" class="push-description">
+                        <span>
+                            {{element.description}}
+                        </span>
+                    </td>
+                </ng-container>
+
+                <!-- date Column -->
+                <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="push-datetime"> Date </th>
+                    <td mat-cell *matCellDef="let element" class="push-date">
+                        <span>
+                            {{element.date}}
+                        </span>
+                    </td>
+                </ng-container>
+
+                <!-- time Column -->
+                <ng-container matColumnDef="time">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="push-datetime"> Time </th>
+                    <td mat-cell *matCellDef="let element" class="push-time">
+                        <span>
+                            {{element.time}}
+                        </span>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator [pageSizeOptions]="[20, 30, 40]" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>

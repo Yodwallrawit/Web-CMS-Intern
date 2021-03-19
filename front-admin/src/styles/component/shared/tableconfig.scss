@@ -1,0 +1,123 @@
+// table {
+//   width: 100%;
+// }
+
+// .mat-table {
+//   background-color: transparent;
+//   box-shadow: unset;
+//   height: $heighttableconfig;
+//   display: block;
+//   overflow-y: auto;
+//   border-top: 1px solid $white;
+//   border-bottom: 1px solid $white;
+
+//   thead {
+//     >.mat-header-row {
+//       >.mat-header-cell {
+//         border-bottom-color: $white;
+//         color: $white;
+
+//       }
+
+//       >.imgside {
+//         width: 80px;
+//       }
+
+//       >.name{
+//         width: 150px;
+//       }
+
+//       >.urlside {
+//         width: 700px;
+//       }
+
+//       >.desside {
+//         width: 100vh;
+//       }
+
+//       >.mat-sort-header {
+//         color: $white;
+//         font-size: 15px;
+//       }
+//     }
+//   }
+
+//   tbody {
+//     >.mat-row {
+//       >.mat-cell {
+//         font-size: 15px;
+//         font-weight: 200;
+//         color: $white;
+//         border-bottom-color: $white;
+//         cursor: default;
+//       }
+//     }
+//   }
+
+//   th{
+//     >.textdelete{
+//       display: flex;
+//       justify-content: center;
+//       align-items: center
+//     }
+//   }
+
+//   td {
+//     padding: 10px 0;
+
+//     >.idelete{
+//       display: flex;
+//       justify-content: center;
+//       align-items: center
+//   } 
+
+//     img {
+//       width: 25px;
+//     }
+//   }
+
+//   span {
+//     @include pointer();
+//   }
+// }
+
+// .mat-paginator {
+//   background-color: transparent;
+//   color: $white;
+
+//   .mat-form-field-infix {
+//     >.mat-select {
+//       >.mat-select-trigger {
+//         >.mat-select-value {
+//           >.mat-select-value-text {
+//             span {
+//               color: $white;
+//             }
+//           }
+//         }
+
+//         >.mat-select-arrow-wrapper {
+//           >.mat-select-arrow {
+//             color: $white;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .mat-form-field-wrapper {
+//     >.mat-form-field-underline {
+//       background-color: $white;
+//     }
+//   }
+
+//   .mat-paginator-range-actions {
+//     button {
+//       color: $white;
+//     }
+//   }
+// }
+
+img {
+    width: 25px;
+}

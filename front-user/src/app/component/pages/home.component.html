@@ -1,0 +1,54 @@
+<div class="wrap-web">
+    <app-swipertest></app-swipertest>
+    <div class="web-wrap-content">
+        <div class="wrap-c1">
+            <div class="head-left">
+                <app-headcontent class="menu-head" [headname]="'ช่าวใหม่'"></app-headcontent>
+
+                <div class="manage-left">
+                    <app-card class="content1" [articleJson]="item" *ngFor="let item of getnewArticle | slice:0:2;">
+                    </app-card>
+                </div>
+            </div>
+
+
+            <div class="head-right">
+                <app-headcontent class="menu-head" [headname]="'ยอดฮิตในสัปดาห์'"></app-headcontent>
+                <div class="img-cover-content">
+                    <app-imgcontent [articleIMGJson]="imgcont"
+                        *ngFor="let imgcont of getresponsepopofweek | slice:0:1;"></app-imgcontent>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wer">
+
+            <div class="manage-left-c2">
+
+                <app-typecontent (takeidtype)=sentIdgetarticle($event)></app-typecontent>
+
+                <div class="wer-left" #werleft>
+                    <app-card  class="content1" [articleJson]="item" *ngFor="let item of getdataarticle | slice:0:3;">
+                    </app-card>
+                </div>
+
+            </div>
+
+            <div class="manage-right-c2">
+                <app-headcontent class="menu-head" [headname]="'ช่าวฮิต'"></app-headcontent>
+
+                <div class="wer-right">
+                    <app-slidecontent [articleslideCont]="slidecontent" *ngFor="let slidecontent of getresponsetopview">
+                    </app-slidecontent>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrap-c3">
+            <app-headcontent class="menu-head" [headname]="'Video'"></app-headcontent>
+            <app-videocontent></app-videocontent>
+        </div>
+    </div>
+</div>

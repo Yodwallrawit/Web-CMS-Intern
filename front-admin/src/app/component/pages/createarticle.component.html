@@ -1,0 +1,91 @@
+<div class="page-side">
+    <div class="create-article">
+        <div class="sidehead">
+            <label for="fheader">Header</label>
+            <p [class.active]="isActiveHeader">*Required header</p>
+            <input [(ngModel)]="header" type="text" [class.active]="isActiveHeader">
+        </div>
+        <div class="sidedrop">
+            <div class="left">
+                <div class="dropcategory">
+                    <div class="wrap-label">
+                        <label for="Category"> Category <br></label>
+                        <p [class.active]="isActiveCategory">*Please Select Category</p>
+                    </div>
+                    <!-- {{selectedID}} -->
+                    <select [(ngModel)]="selectedID" id="ddlViewBy" class="la1" id="Category" name="Category"
+                        [class.active]="isActiveCategory">
+                        <option value="0">select-drop</option>
+                        <option class="op1" value="{{item.name}}" *ngFor="let item of getmenudrop" [value]="item.id">
+                            {{item.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="right">
+                <div class="dropcategory">
+                    <label for="Status"> Status <br></label>
+                    <!-- {{selectedStatus}} -->
+                    <select [(ngModel)]="selectedStatus" class="la1" id="status" name="status">
+                        <option class="op1" value="private" selected>Private</option>
+                        <option class="op1" value="public">Public</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="body-text">
+            <label for="fheader">Body</label>
+            <p [class.active]="isActiveContent">*Required Content</p>
+        </div>
+        <div class="editorside">
+            <ckeditor  [editor]="Editor" (ready)="onReady($event)" (change)="onChange($event)"></ckeditor>
+        </div>
+        <div class="bord-side">
+            <div class="bord-left">
+                <div class="paragraphsiad">
+                    <label for="fheader">Pre-Content</label>
+                    <p [class.active]="isActivePrecontent">*Required precontent</p>
+                    <input [(ngModel)]="precontent" type="text" [class.active]="isActivePrecontent">
+                </div>
+                <div class="urlside">
+                    <label for="fheader">Url</label>
+                    <p [class.active]="isActiveURL">*Required linkURL</p>
+                    <input [(ngModel)]="keepurl" type="text" [class.active]="isActiveURL">
+                   <p class="textlink"> 
+                   *Please copy the URL of the link after the equal mark **"https://www.youtube.com/watch?v=<mark style="background-color: yellow;">owL4RzlIkt4</mark>"**</p> 
+                </div>
+                <div class="tagside">
+                    <label for="fheader">Tags</label>
+                    <tag-input class="tag-wrap" [(ngModel)]="SelectTag" [onlyFromAutocomplete]="true">
+                        <tag-input-dropdown [showDropdownIfEmpty]="true" [focusFirstElement]="true"
+                            [displayBy]="'value'" [identifyBy]="'id'" [autocompleteItems]="autocompleteItemsAsObjects">
+                            <ng-template let-item="item" let-index="index">
+                                {{ item.value }}
+                            </ng-template>
+                        </tag-input-dropdown>
+                    </tag-input>
+                </div>
+                <div class="ttxt">
+                    <label for="datetime">Date Time</label>
+                </div>
+                <div class="datetimeside">
+                    <p [class.active]="isActiveDatetime">*Required Datetime</p>
+                    <input (change)="somethingChanged($event.target.value)" type="datetime-local" id="birthdaytime"
+                        name="birthdaytime" required [class.active]="isActiveDatetime">
+                </div>
+            </div>
+            <div class="bord-right">
+               
+                <app-uploadimg [class.active]="isActiveImage" (dataIMGArticle)="img64($event)"></app-uploadimg>
+                
+            </div>
+            
+        </div>
+        <div class="buttonsise">
+            <app-buttoncreate (click)="create()" [topicbtn]="'Create'"></app-buttoncreate>
+        </div>
+
+    </div>
+</div>
+<!-- <app-testcrop></app-testcrop> -->

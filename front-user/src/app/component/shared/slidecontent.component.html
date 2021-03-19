@@ -1,0 +1,15 @@
+<a [routerLink]="['/content', articleslideCont.id]"> 
+<div class="card">
+    <div class="card-left" *ngIf="articleslideCont && articleslideCont.cover_image">
+        <img class="img-card" [src]="apiBaseURL+articleslideCont.cover_image">
+    </div>
+    <div class="card-right">
+        <div class="date">
+            {{articleslideCont.publish_datetime}}
+        </div>
+        <div class="heder">
+            {{articleslideCont.pre_content}}
+        </div>
+    </div>
+</div>
+</a>

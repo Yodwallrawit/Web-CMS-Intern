@@ -1,0 +1,22 @@
+<a [routerLink]="['/content', articleJson.id]">
+    <!-- {{apiBaseURL}}{{articleJson&&articleJson.cover_image}} -->
+    <div class="wrap-content">
+
+        <div class="top-content" *ngIf="articleJson && articleJson.cover_image">
+            <img class="img-top-content" [src]=" apiBaseURL+ articleJson.cover_image | safe ">
+        </div>
+        <div class="bottom-content">
+
+            <div class="title-content">
+                {{articleJson&&articleJson.title}}
+            </div>
+            <div class="date-content">
+                {{articleJson&&articleJson.publish_datetime}}
+            </div>
+            <div class="short-content">
+                {{articleJson&&articleJson.pre_content}}
+            </div>
+        </div>
+    </div>
+
+</a>

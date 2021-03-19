@@ -1,0 +1,145 @@
+<div class="dialogEditAllcontent">
+    <h3 mat-dialog-title>Edit Article</h3>
+    <div class="input-edit-allarticle">
+        <div class="edit-img-article">
+            <div class="head-name-edit">
+                <span>
+                    Image
+                </span>
+            </div>
+
+            <div [class.active]="isActiveText" *ngIf="!files.length" class="area-dragdrop" appDrag
+                (files)="filesDropped($event)">
+                <div class="text-wrapper">
+                    <div class="centered" (click)="imageInput.click($event)">
+                        <p [class.active]="isActiveText">Drop your new image here!</p>
+                    </div>
+                    <div class="mantle-img">
+                        <img *ngIf="imageNew" [(src)]="imagenew">
+                    </div>
+                </div>
+            </div>
+            <div class="btn-cancel" *ngIf="CancelImg">
+                <button (click)="clear()">cancel</button>
+            </div>
+
+            <div class="upload">
+                <img [src]="image">
+            </div>
+
+            <!-- <div class="btn-cancel" *ngIf="CancelImg">
+                <button (click)="clear()">cancel</button>
+            </div> -->
+
+            <input #imageInput style="display: none;" type="file" accept="image/*" (change)="changeListener($event)">
+        </div>
+
+        <div class="edit-head-article">
+            <div class="head-name-edit">
+                <span>
+                    Header
+                </span>
+            </div>
+            <input [(ngModel)]="headernew" type="text">
+        </div>
+        <div class="edit-category-article">
+            <div class="head-name-edit">
+                <span>
+                    Category
+                </span>
+            </div>
+            <select [(ngModel)]="selectcategoryNew" id="ddlViewBy" class="la1" id="Category" name="Category">
+                <option value="">select-drop</option>
+                <option class="op1" *ngFor="let item of getmenu" [value]="item.id">
+                    {{item.name}}
+                </option>
+            </select>
+        </div>
+
+        <div class="edit-status-article">
+            <div class="head-name-edit">
+                <span>
+                    Status
+                </span>
+            </div>
+            <select [(ngModel)]="selectnewStatus" class="la1" id="status" name="status">
+                <option class="op1" value="private" selected>Private</option>
+                <option class="op1" value="public">Public</option>
+            </select>
+        </div>
+
+        <div class="edit-article-article">
+            <div class="head-name-edit">
+                <span>
+                    Body
+                </span>
+            </div>
+            <ckeditor [(ngModel)]="EditorNew" class="cdk-edit" [editor]="Editor" (ready)="onReady($event)"
+                (change)="onChange($event)"></ckeditor>
+        </div>
+
+        <div class="edit-precontent-article">
+            <div class="head-name-edit">
+                <span>
+                    Pre-content
+                </span>
+            </div>
+            <input [(ngModel)]="newprecontent" type="text">
+        </div>
+
+        <div class="edit-url-article">
+            <div class="head-name-edit">
+                <span>
+                    Url
+                </span>
+            </div>
+            <input [(ngModel)]="newUrl" type="text">
+            <p class="textlink">*Please copy the URL of the link after the equal mark **"https://www.youtube.com/watch?v=<mark style="background-color: yellow;">owL4RzlIkt4</mark>"**</p> 
+        </div>
+
+        <div class="edit-tags-article">
+            <div class="head-name-edit">
+                <span>
+                    Tags
+                </span>
+            </div>
+            <!-- <button (click)="testfunction()" >Test</button> -->
+            <tag-input class="tag-wrap" [(ngModel)]="SelectTag" [onlyFromAutocomplete]="true">
+                <tag-input-dropdown [showDropdownIfEmpty]="true" [focusFirstElement]="true" [displayBy]="'value'"
+                    [identifyBy]="'id'" [autocompleteItems]="autocompleteItemsAsObjects">
+                    <ng-template (click)="testfunction()" let-item="item" let-index="index">
+                        {{ item.value }}
+                    </ng-template>
+                </tag-input-dropdown>
+            </tag-input>
+        </div>
+
+
+        <div class="edit-url-article">
+            <div class="head-name-edit">
+                <span>
+                    Pin Order
+                </span>
+            </div>
+            <input type="number" [(ngModel)]="pinorder">
+        </div>
+
+
+
+        <div class="edit-date-article">
+            <div class="head-name-edit">
+                <span>
+                    Datetime
+                </span>
+            </div>
+            <input (change)="somethingChanged($event.target.value)" type="datetime-local" id="birthdaytime"
+                [(ngModel)]="date" name="birthdaytime" required>
+        </div>
+    </div>
+    <div class="wrap-btnn-dialog-del">
+        <mat-dialog-actions class="bbtnn" align="end">
+            <button class="btnn-del1" mat-button mat-dialog-close> Cancle</button>
+            <button class="btnn-del2" (click)="onClick()"> Apply</button>
+        </mat-dialog-actions>
+    </div>
+</div>

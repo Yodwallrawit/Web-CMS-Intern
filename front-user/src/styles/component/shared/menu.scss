@@ -1,0 +1,28 @@
+.wrap-menudrop {
+    width: 100%;
+    height: 100%;
+    // background-color: white;
+    >.menu-parent {
+        // position: relative;
+        color: $white;
+        display: flex;
+        padding-left: 20px;
+        padding-right: 15px;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            background-color: transparent;
+            color: $white;
+            margin: unset;
+            border: unset;
+            font-size: 15px;
+            position: relative;
+
+            >.material-icons {
+                position: absolute;
+            }
+        }
+
+    }
+}

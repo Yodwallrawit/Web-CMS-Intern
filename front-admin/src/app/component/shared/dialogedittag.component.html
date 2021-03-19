@@ -1,0 +1,20 @@
+<div class="wrap-dialog-del">
+    <h3 mat-dialog-title>Edit tag</h3>
+    <div class="wrap-text-input">
+        <div class="editall">
+            <div class="editfirst">
+                <span class="text01">
+                    Name
+                </span>
+                <input type="text" [(ngModel)]="name">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrap-btnn-dialog-del">
+    <mat-dialog-actions class="bbtnn" align="end">
+        <button class="btnn-del1" mat-button mat-dialog-close> Cancle</button>
+        <button class="btnn-del2" (click)="onClick()"> Apply</button>
+    </mat-dialog-actions>
+</div>

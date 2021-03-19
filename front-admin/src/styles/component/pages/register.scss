@@ -1,0 +1,213 @@
+.page-side {
+    background: $younggrey;
+    height: auto;
+    min-height: calc(100vh - #{$navbar});
+
+    >.register {
+        height: auto;
+        padding: 30px;
+
+        >.headregister {
+            font-size: $font-size-30;
+            color: white;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        >.information-side {
+            width: 100%;
+            height: auto;
+            display: flex;
+            gap: 20px;
+
+
+            >.area01 {
+                width: 33.33%;
+                height: auto;
+
+                >.nameside {
+                    margin-bottom: 20px;
+
+                    p {
+                        display: none;
+
+                        &.active {
+                            display: flex;
+                            color: red;
+                        }
+                    }
+
+                    app-inputtext {
+                        &.active {
+                            input {
+                                border: 3px solid red;
+                            }
+                        }
+                    }
+                }
+
+                >.fristside {
+                    margin-bottom: 20px;
+
+                    p {
+                        display: none;
+
+                        &.active {
+                            display: flex;
+                            color: red;
+                        }
+                    }
+
+                    app-inputtext {
+                        &.active {
+                            input {
+                                border: 3px solid red;
+                            }
+                        }
+                    }
+                }
+
+                >.passside {
+                    margin-bottom: 20px;
+
+                    p {
+                        display: none;
+
+                        &.active {
+                            display: flex;
+                            color: red;
+                        }
+                    }
+
+                    app-inputtext {
+                        &.active {
+                            input {
+                                border: 3px solid red;
+                            }
+                        }
+                        &:active.IsActiveConfirm{
+                            input {
+                                border: 3px solid red;
+                            }
+                        }
+                    }
+                }
+
+                >.mailside {
+                    margin-bottom: 20px;
+
+                    p {
+                        display: none;
+
+                        &.active {
+                            display: flex;
+                            color: red;
+                        }
+                    }
+
+                    app-inputtext {
+                        &.active {
+                            input {
+                                border: 3px solid red;
+                            }
+                        }
+                    }
+                }
+            }
+
+            >.area02 {
+                width: 33.33%;
+                height: auto;
+
+                >.userside {
+                    margin-bottom: 20px;
+
+                    p {
+                        display: none;
+
+                        &.active {
+                            display: flex;
+                            color: red;
+                        }
+                    }
+
+                    app-inputtext {
+                        &.active {
+                            input {
+                                border: 3px solid red;
+                            }
+                        }
+                    }
+                }
+
+                >.lastside {
+                    margin-bottom: 20px;
+
+                    p {
+                        display: none;
+
+                        &.active {
+                            display: flex;
+                            color: red;
+                        }
+                    }
+
+                    app-inputtext {
+                        &.active {
+                            input {
+                                border: 3px solid red;
+                            }
+                        }
+                    }
+                }
+
+                >.confirmside {
+                    margin-bottom: 20px;                   
+        
+                        p {
+                            display: none;
+    
+                            &.active {
+                                display: flex;
+                                color: red;
+                            }
+                        }
+                    
+
+                   
+
+                    app-inputtext {
+                        &.active {
+                            input {
+                                border: 3px solid red;
+                            }
+                        }
+                        &:active.IsActiveConfirm {
+                            input {
+                                border: 3px solid red;
+                            }
+                        }
+                    }
+                }
+
+                >.typeside {}
+            }
+
+            >.area03 {
+                width: 33.33%;
+                height: auto;
+            }
+        }
+
+        >.buttonsise {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+}

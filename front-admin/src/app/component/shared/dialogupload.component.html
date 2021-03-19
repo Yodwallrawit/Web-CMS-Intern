@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>เลือกรูปภาพที่ต้องการ</h2>
+<mat-dialog-content class="mat-typography">
+  <div class="filestyle">
+    <label class="aaaa" for="file">
+      <span class="material-icons">
+        unarchive
+      </span>
+      Upload
+    </label>
+    <input id="file" #fileimg type="file" accept=".jpg, .jpeg, .png" (change)="fileChangeEvent($event)" />
+      <image-cropper class="testaa"
+      [roundCropper]="50"
+      [imageChangedEvent]="imageChangedEvent"
+      [maintainAspectRatio]="true"
+      [aspectRatio]="1 / 1"
+      [cropperMinWidth]="128"
+      [onlyScaleDown]="true"
+
+      format="png"
+      (imageCropped)="imageCropped($event)"
+      (imageLoaded)="imageLoaded()"
+      (cropperReady)="cropperReady()"
+      (loadImageFailed)="loadImageFailed()"
+      ></image-cropper> 
+    <img [src]="croppedImage" />
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button class="bttcan01" mat-button mat-dialog-close>Cancel</button>
+  <button class="bttcan02" mat-button [mat-dialog-close]="croppedImage" cdkFocusInitial >Apply</button>
+</mat-dialog-actions>
